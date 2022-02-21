@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="transaction"
+	xmlns:tns="transaction"
+	elementFormDefault="qualified">
+
+	<xsd:element name="CustomerRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="username" type="xsd:string" />
+				<xsd:element name="creditNumber" type="xsd:int" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Acknowledgement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="transactionStatus" type="xsd:boolean" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

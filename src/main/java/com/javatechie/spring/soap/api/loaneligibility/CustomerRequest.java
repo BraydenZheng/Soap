@@ -40,117 +40,34 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "customerName",
-    "age",
-    "yearlyIncome",
-    "cibilScore",
-    "employmentMode"
+    "username",
+    "creditNumber",
 })
 @XmlRootElement(name = "CustomerRequest")
 public class CustomerRequest {
 
     @XmlElement(required = true)
-    protected String customerName;
-    protected int age;
-    protected long yearlyIncome;
-    protected int cibilScore;
+    protected String username;
     @XmlElement(required = true)
-    protected String employmentMode;
+    protected String creditNumber;
 
-    /**
-     * Gets the value of the customerName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCustomerName() {
-        return customerName;
+    public String getUserName()
+    {
+        return username;
     }
 
-    /**
-     * Sets the value of the customerName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCustomerName(String value) {
-        this.customerName = value;
+    public void setUserName(String userName)
+    {
+        this.username = userName;
     }
 
-    /**
-     * Gets the value of the age property.
-     * 
-     */
-    public int getAge() {
-        return age;
+    public String getCreditNumber()
+    {
+        return creditNumber;
     }
 
-    /**
-     * Sets the value of the age property.
-     * 
-     */
-    public void setAge(int value) {
-        this.age = value;
+    public void setCreditNumber(String creditNumber)
+    {
+        this.creditNumber = creditNumber;
     }
-
-    /**
-     * Gets the value of the yearlyIncome property.
-     * 
-     */
-    public long getYearlyIncome() {
-        return yearlyIncome;
-    }
-
-    /**
-     * Sets the value of the yearlyIncome property.
-     * 
-     */
-    public void setYearlyIncome(long value) {
-        this.yearlyIncome = value;
-    }
-
-    /**
-     * Gets the value of the cibilScore property.
-     * 
-     */
-    public int getCibilScore() {
-        return cibilScore;
-    }
-
-    /**
-     * Sets the value of the cibilScore property.
-     * 
-     */
-    public void setCibilScore(int value) {
-        this.cibilScore = value;
-    }
-
-    /**
-     * Gets the value of the employmentMode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEmploymentMode() {
-        return employmentMode;
-    }
-
-    /**
-     * Sets the value of the employmentMode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEmploymentMode(String value) {
-        this.employmentMode = value;
-    }
-
 }

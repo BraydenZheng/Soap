@@ -20,14 +20,14 @@ public class SoapWSConfig {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(context);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/ws/*");
+		return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/transaction/*");
 	}
 
-	@Bean(name = "loanEligibility")
+	@Bean(name = "transactionEligibility")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
 		DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
-		defaultWsdl11Definition.setPortTypeName("LoanEligibilityindicator");
-		defaultWsdl11Definition.setLocationUri("/ws");
+		defaultWsdl11Definition.setPortTypeName("transactionEligibilityIndicator");
+		defaultWsdl11Definition.setLocationUri("/transaction");
 		defaultWsdl11Definition.setTargetNamespace("transaction");
 		defaultWsdl11Definition.setSchema(schema);
 		return defaultWsdl11Definition;
@@ -36,7 +36,7 @@ public class SoapWSConfig {
 
 	@Bean
 	public XsdSchema schema() {
-		return new SimpleXsdSchema(new ClassPathResource("loaneligibility.xsd"));
+		return new SimpleXsdSchema(new ClassPathResource("creditTransaction.xsd"));
 	}
 
 }
